@@ -1,92 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Server</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Taron Moe-Stull</title>
+  <meta name="description" content="Taron Moe-Stull — Computer Science student building reliable software across systems, data, and engineering." />
+
+  <!-- Open Graph (looks good when shared) -->
+  <meta property="og:title" content="Taron Moe-Stull" />
+  <meta property="og:description" content="Computer Science student building reliable software across systems, data, and engineering." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: add after you have a real domain -->
+  <!-- <meta property="og:url" content="https://taronmoestull.com" /> -->
+  <!-- Optional: add an image at assets/og.png and uncomment -->
+  <!-- <meta property="og:image" content="https://taronmoestull.com/assets/og.png" /> -->
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <h1> Taron Moe-Stull</h1>
-    <h2> Net ID: z12t721</h2>
-    <a href="https://taronmoe.github.io/"> My GitHub Pages Site</a>
-    <h2> Class Schedule</h2>
-    <table>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <tr>
-            <th>Time</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-        </tr>
-        <tr>
-            <td>8:00am</td>
-            <td>CSCI 112</td>
-            <td>     </td>
-            <td>CSCI 112</td>
-            <td>     </td>
-            <td>CSCI 112</td>
-        </tr>
-        <tr>
-            <td>9:00am</td>
-            <td>BIOB 105</td>
-            <td>CSCI 351</td>
-            <td>BIOB 105</td>
-            <td>CSCI 351</td>
-            <td>BIOB 105</td>
-        </tr>
-        <tr>
-            <td>10:00am</td>
-            <td>      </td>
-            <td>      </td>
-            <td>      </td>
-            <td>      </td>
-            <td>      </td>
-        </tr>
-        <tr>
-            <td>11:00am</td>
-            <td>      </td>
-            <td>      </td>
-            <td>      </td>
-            <td>      </td>
-            <td>      </td>
-        </tr>
-        <tr>
-            <td>12:00</td>
-            <td>CSCI 291</td>
-            <td>ESOF 322</td>
-            <td>CSCI 291</td>
-            <td>ESOF 322</td>
-            <td>CSCI 291</td>
-        </tr>
-        <tr>
-            <td>1:00</td>
-            <td>CSCI 331</td>
-            <td>      </td>
-            <td>CSCI 331</td>
-            <td>      </td>
-            <td>CSCI 331</td>
-        </tr>
-        <tr>
-            <td>2:00</td>
-            <td>     </td>
-            <td>     </td>
-            <td>     </td>
-            <td>     </td>
-            <td>CSCI 112 (Lab)</td>
-        </tr>
-    </table>
-    <h2>  Previous Courses </h2>
-    <ul>
-        <li>CSCI 127</li>
-        <li>M 221</li>
-        <li>CSCI 246</li>
-        <li>M 172</li>
-        <li>CSCI 132</li>
-    </ul>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Taron Moe-Stull</span>
+      </a>
 
-        
-    
+      <nav class="nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" id="top">
+      <p class="eyebrow">Computer Science • Systems • Data • Software Engineering</p>
+
+      <h1 class="headline">
+        I build reliable software and explain it clearly.
+      </h1>
+
+      <p class="lede">
+        I’m Taron Moe-Stull, a Computer Science student at Montana State University (graduating May 2026).
+        I like projects where correctness matters: systems work, data pipelines, and practical ML tooling.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">View projects</a>
+
+        <!-- Replace these hrefs -->
+        <a class="btn ghost" href="https://github.com/taronmoe" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-k">Focus</div>
+          <div class="stat-v">Systems + Data</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">Strength</div>
+          <div class="stat-v">Shipping + documentation</div>
+        </div>
+        <div class="stat">
+          <div class="stat-k">Tools</div>
+          <div class="stat-v">Python • C • Java • SQL • Linux</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Pick 3–5. Each should answer: what you built, how it works, and why it matters.</p>
+      </div>
+
+      <div class="grid cards">
+        <!-- Project card template -->
+<article class="card">
+  <div class="card-top">
+    <h3>Sudoku Solver (Constraint Satisfaction & Search)</h3>
+    <p class="meta">Python · Artificial Intelligence · Constraint Solving</p>
+  </div>
+
+  <p class="card-desc">
+    Built a flexible Sudoku solving framework implementing multiple search and
+    constraint satisfaction algorithms, evaluated using decision-based
+    performance metrics rather than runtime.
+  </p>
+
+  <ul class="bullets">
+    <li>
+      Implements five solving strategies (backtracking, forward checking,
+      AC-3, simulated annealing, genetic algorithms) behind a shared
+      constraint-checking interface.
+    </li>
+    <li>
+      Uses constraint propagation and pruning to dramatically reduce search
+      space compared to naive backtracking approaches.
+    </li>
+    <li>
+      Compares algorithm behavior using decision-level metrics to enable fair,
+      interpretable evaluation across deterministic and stochastic methods.
+    </li>
+  </ul>
+
+<div class="card-links">
+  <a href="https://github.com/taronmoe/sudoku-solver-ai" target="_blank" rel="noreferrer">Code</a>
+  <span aria-hidden="true">·</span>
+  <a href="assets/projects/sudoku/paper.pdf" target="_blank" rel="noreferrer">Paper</a>
+  <span aria-hidden="true">·</span>
+  <a href="assets/projects/sudoku/design.pdf" target="_blank" rel="noreferrer">Design</a>
+</div>
+</article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Project Title</h3>
+            <p class="meta">C • Linux • Systems</p>
+          </div>
+
+          <p class="card-desc">
+            One-sentence outcome. Example: Implemented a simulator/emulator with full test coverage and deterministic behavior.
+          </p>
+
+          <ul class="bullets">
+            <li>Explain the core problem and constraints.</li>
+            <li>Highlight one “hard part” and how you solved it.</li>
+            <li>Add a measurable or verifiable proof (tests passing, benchmarks, demo).</li>
+          </ul>
+
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+            <span aria-hidden="true">·</span>
+            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Project Title</h3>
+            <p class="meta">Java • Backend • SQL</p>
+          </div>
+
+          <p class="card-desc">
+            One-sentence outcome. Example: Built a menu-driven app using clean data structures and clear error handling.
+          </p>
+
+          <ul class="bullets">
+            <li>Describe the system boundary and responsibilities.</li>
+            <li>Show engineering maturity (edge cases, input validation, design).</li>
+            <li>Optional: what you’d improve next (scaling, architecture, UX).</li>
+          </ul>
+
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+            <span aria-hidden="true">·</span>
+            <a href="#" target="_blank" rel="noreferrer">Readme</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Keep this tight. Outcome-first. Tools second.</p>
+      </div>
+
+      <div class="stack">
+        <div class="row">
+          <div class="row-left">
+            <h3>Role / Team</h3>
+            <p class="meta">Company • Dates</p>
+          </div>
+          <div class="row-right">
+            <ul class="bullets">
+              <li>Owned X; improved Y by Z (or created A that enabled B).</li>
+              <li>Built/automated/standardized ______; reduced ______.</li>
+              <li>Tools: Python, SQL, Linux, Git (only if relevant).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row-left">
+            <h3>Certification</h3>
+            <p class="meta">Professional Scrum Master I (PSM I)</p>
+          </div>
+          <div class="row-right">
+            <p class="muted">
+              Certified in Scrum fundamentals with emphasis on iterative delivery and team execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Readable, honest, and aligned with the roles you want.</p>
+      </div>
+
+      <div class="pill-grid" aria-label="Skills list">
+        <span class="pill">Python</span>
+        <span class="pill">C</span>
+        <span class="pill">Java</span>
+        <span class="pill">SQL</span>
+        <span class="pill">Linux</span>
+        <span class="pill">Git</span>
+        <span class="pill">Docker</span>
+        <span class="pill">Data analysis</span>
+        <span class="pill">Testing</span>
+        <span class="pill">Documentation</span>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Make it easy for people to reach you in one click.</p>
+      </div>
+
+      <div class="contact">
+        <div class="contact-card">
+          <p class="contact-title">Email</p>
+          <a class="contact-link" href="mailto:you@example.com">you@example.com</a>
+          <p class="muted">Fastest response.</p>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-title">Links</p>
+          <div class="contact-links">
+            <a href="https://github.com/taronmoe" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+          <p class="muted">Keep these updated.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Taron Moe-Stull</p>
+      <p class="muted">Built with HTML/CSS. Hosted on GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
