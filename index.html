@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
 
-  <title>Taron Moe-Stull</title>
-  <meta name="description" content="Taron Moe-Stull — Computer Science student building reliable software across systems, data, and engineering." />
+<title>Taron Moe-Stull</title>
 
-  <!-- Open Graph (looks good when shared) -->
-  <meta property="og:title" content="Taron Moe-Stull" />
-  <meta property="og:description" content="Computer Science student building reliable software across systems, data, and engineering." />
-  <meta property="og:type" content="website" />
+<meta property="og:title" content="Taron Moe-Stull" />
+
+<meta name="description"
+  content="Taron Moe-Stull — Computer Science student building reliable systems, data driven software, and practical ML tools. Projects in RL, inference, and constraint solving." />
+
+<meta property="og:description"
+  content="Computer Science student building reliable systems and ML tools. Projects in reinforcement learning, inference, and constraint solving." />
+
+<meta property="og:type" content="website" />
+<meta name="keywords" content="Taron Moe-Stull, Computer Science, Software Engineer, Systems Engineering, Data Engineering, Machine Learning, Reinforcement Learning, Bayesian Networks, Montana State University" />
+
   <!-- Optional: add after you have a real domain -->
   <!-- <meta property="og:url" content="https://taronmoestull.com" /> -->
   <!-- Optional: add an image at assets/og.png and uncomment -->
@@ -47,44 +53,92 @@
         I build reliable software and explain it clearly.
       </h1>
 
-      <p class="lede">
-        I’m Taron Moe-Stull, a Computer Science student at Montana State University (graduating May 2026).
-        I like projects where correctness matters: systems work, data pipelines, and practical ML tooling.
-      </p>
+      <p class="subhead">
+  Systems minded engineer with product instincts and operational experience.
+</p>
+
+
+<p class="lede">
+  I’m Taron Moe-Stull, a Computer Science student at Montana State University graduating May 2026.
+  I build correct, well documented software; especially systems oriented projects, data pipelines,
+  and practical machine learning tools that behave predictably under real constraints.
+ I specialize in identifying ambiguous, real world problems, framing them precisely, and turning them into clear plans and shipped improvements.
+</p>
+
+
 
       <div class="cta-row">
         <a class="btn primary" href="#projects">View projects</a>
 
         <!-- Replace these hrefs -->
         <a class="btn ghost" href="https://github.com/taronmoe" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/taron-moe-stull/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </div>
 
       <div class="stats">
-        <div class="stat">
-          <div class="stat-k">Focus</div>
-          <div class="stat-v">Systems + Data</div>
-        </div>
-        <div class="stat">
-          <div class="stat-k">Strength</div>
-          <div class="stat-v">Shipping + documentation</div>
-        </div>
-        <div class="stat">
-          <div class="stat-k">Tools</div>
-          <div class="stat-v">Python • C • Java • SQL • Linux</div>
-        </div>
+<div class="stat">
+  <div class="stat-k">Focus</div>
+  <div class="stat-v">Systems, data, and complex problem spaces</div>
+</div>
+<div class="stat">
+  <div class="stat-k">Strength</div>
+  <div class="stat-v">Designing, building, and shipping reliable solutions</div>
+</div>
+<div class="stat">
+  <div class="stat-k">Tools</div>
+  <div class="stat-v">Python • C • Java • SQL • Linux</div>
+</div>
+
       </div>
     </section>
 
     <section class="section" id="projects">
       <div class="section-head">
         <h2>Projects</h2>
-        <p>Pick 3–5. Each should answer: what you built, how it works, and why it matters.</p>
+        <p>Selected work focused on correctness, interpretability, and performance under real constraints.</p>
       </div>
 
       <div class="grid cards">
-        <!-- Project card template -->
+  <!-- Project card template -->
+
+<article class="card">
+  <div class="card-top">
+    <h3>Reinforcement Learning for the Racetrack Problem</h3>
+    <p class="meta">Python · Reinforcement Learning · Planning & Control</p>
+  </div>
+
+  <p class="card-desc">
+    Implemented and compared three reinforcement learning algorithms: Value Iteration,
+    Q-Learning, and SARSA, to understand convergence, stability, and policy quality under stochastic dynamics
+    and crash penalties.
+
+  </p>
+
+  <ul class="bullets">
+    <li>
+      Modeled a high dimensional state space combining position and velocity, with
+      stochastic acceleration failures and two crash semantics (restart vs nearest cell).
+    </li>
+    <li>
+      Implemented Value Iteration for exact planning and Q-Learning/SARSA for model free
+      learning, comparing convergence behavior, policy quality, and computational cost.
+    </li>
+    <li>
+      Evaluated learned policies across multiple track geometries (2-track, W-track,
+      U-track), highlighting tradeoffs between optimality, stability, and runtime.
+    </li>
+  </ul>
+
+  <div class="card-links">
+    <a href="https://github.com/taronmoe/racetrack" target="_blank" rel="noreferrer">Code</a>
+    <span aria-hidden="true">·</span>
+    <a href="assets/projects/racetrack/racetrack-paper.pdf" target="_blank" rel="noreferrer">Paper</a>
+    <span aria-hidden="true">·</span>
+    <a href="assets/projects/racetrack/racetrack-design.pdf" target="_blank" rel="noreferrer">Design</a>
+  </div>
+</article>
+
 <article class="card">
   <div class="card-top">
     <h3>Sudoku Solver (Constraint Satisfaction & Search)</h3>
@@ -93,22 +147,23 @@
 
   <p class="card-desc">
     Built a flexible Sudoku solving framework implementing multiple search and
-    constraint satisfaction algorithms, evaluated using decision-based
-    performance metrics rather than runtime.
+    constraint satisfaction algorithms to compare pruning strength, search behavior,
+    and decision level efficiency (not wall clock time).
+
   </p>
 
   <ul class="bullets">
     <li>
       Implements five solving strategies (backtracking, forward checking,
       AC-3, simulated annealing, genetic algorithms) behind a shared
-      constraint-checking interface.
+      constraint checking interface.
     </li>
     <li>
       Uses constraint propagation and pruning to dramatically reduce search
       space compared to naive backtracking approaches.
     </li>
     <li>
-      Compares algorithm behavior using decision-level metrics to enable fair,
+      Compares algorithm behavior using decision level metrics to enable fair,
       interpretable evaluation across deterministic and stochastic methods.
     </li>
   </ul>
@@ -122,133 +177,238 @@
 </div>
 </article>
 
-        <article class="card">
-          <div class="card-top">
-            <h3>Project Title</h3>
-            <p class="meta">C • Linux • Systems</p>
-          </div>
+<article class="card">
+  <div class="card-top">
+    <h3>Logical Inference in Wumpus World (FOL Reasoning)</h3>
+    <p class="meta">Python · First-Order Logic · Unification · Resolution</p>
+  </div>
 
-          <p class="card-desc">
-            One-sentence outcome. Example: Implemented a simulator/emulator with full test coverage and deterministic behavior.
-          </p>
+  <p class="card-desc">
+    Built a First-Order Logic reasoning system that classifies a query cell as SAFE, UNSAFE,
+    or RISKY by turning percepts into constraints and proving conclusions via contradiction.
 
-          <ul class="bullets">
-            <li>Explain the core problem and constraints.</li>
-            <li>Highlight one “hard part” and how you solved it.</li>
-            <li>Add a measurable or verifiable proof (tests passing, benchmarks, demo).</li>
-          </ul>
+  </p>
 
-          <div class="card-links">
-            <a href="#" target="_blank" rel="noreferrer">Code</a>
-            <span aria-hidden="true">·</span>
-            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
-          </div>
-        </article>
+  <ul class="bullets">
+    <li>
+      Translates path percepts (breeze/stench) and domain rules into CNF clauses, builds a
+      knowledge base, then attempts proofs via contradiction for SAFE/UNSAFE.
+    </li>
+    <li>
+      Implements core inference machinery (unification + resolution) independently of the domain
+      rule set, keeping Wumpus specific rules separate from the reasoning engine.
+    </li>
+    <li>
+      Evaluated on 12 caves with an overall accuracy of 83% (10/12); observed inference cost
+      increasing sharply with grid size and percept ambiguity.
+    </li>
+  </ul>
 
-        <article class="card">
-          <div class="card-top">
-            <h3>Project Title</h3>
-            <p class="meta">Java • Backend • SQL</p>
-          </div>
+  <div class="card-links">
+    <a href="https://github.com/taronmoe/wumpus" target="_blank" rel="noreferrer">Code</a>
+    <span aria-hidden="true">·</span>
+    <a href="assets/projects/wumpus/wumpus-paper.pdf" target="_blank" rel="noreferrer">Paper</a>
+    <span aria-hidden="true">·</span>
+    <a href="assets/projects/wumpus/wumpus-design.pdf" target="_blank" rel="noreferrer">Design</a>
+  </div>
+</article>
 
-          <p class="card-desc">
-            One-sentence outcome. Example: Built a menu-driven app using clean data structures and clear error handling.
-          </p>
+<article class="card">
+  <div class="card-top">
+    <h3>Exact & Approximate Inference in Bayesian Networks</h3>
+    <p class="meta">Python · Bayesian Networks · Probabilistic Inference</p>
+  </div>
 
-          <ul class="bullets">
-            <li>Describe the system boundary and responsibilities.</li>
-            <li>Show engineering maturity (edge cases, input validation, design).</li>
-            <li>Optional: what you’d improve next (scaling, architecture, UX).</li>
-          </ul>
+  <p class="card-desc">
+    Implemented and evaluated Variable Elimination (exact) and Gibbs Sampling (approximate)
+    to quantify the accuracy/runtime tradeoff as Bayesian networks scale in size and evidence complexity.
+  </p>
 
-          <div class="card-links">
-            <a href="#" target="_blank" rel="noreferrer">Code</a>
-            <span aria-hidden="true">·</span>
-            <a href="#" target="_blank" rel="noreferrer">Readme</a>
-          </div>
-        </article>
-      </div>
+  <ul class="bullets">
+    <li>
+      Built VE and Gibbs Sampling from scratch, including factor operations, elimination
+      ordering, sampling schedules, and normalization, without external inference libraries.
+    </li>
+    <li>
+      Evaluated accuracy, runtime, and scalability on three networks (Child, Insurance,
+      Win95pts), showing VE achieves near perfect accuracy while GS scales far better
+      computationally.
+    </li>
+    <li>
+      Demonstrated the real world tradeoff between exact inference and stochastic approximation,
+      confirming GS as the practical choice for large, complex networks.
+    </li>
+  </ul>
+
+  <div class="card-links">
+    <a href="https://github.com/taronmoe/bayes" target="_blank" rel="noreferrer">Code</a>
+    <span aria-hidden="true">·</span>
+    <a href="assets/projects/bayes/bayes-paper.pdf" target="_blank" rel="noreferrer">Paper</a>
+    <span aria-hidden="true">·</span>
+    <a href="assets/projects/bayes/bayes-design.pdf" target="_blank" rel="noreferrer">Design</a>
+  </div>
+</article>
+</div>
+
+
+
     </section>
 
     <section class="section" id="experience">
       <div class="section-head">
         <h2>Experience</h2>
-        <p>Keep this tight. Outcome-first. Tools second.</p>
+        <p>Leadership and operations experience alongside engineering work.</p>
       </div>
 
-      <div class="stack">
-        <div class="row">
-          <div class="row-left">
-            <h3>Role / Team</h3>
-            <p class="meta">Company • Dates</p>
-          </div>
-          <div class="row-right">
-            <ul class="bullets">
-              <li>Owned X; improved Y by Z (or created A that enabled B).</li>
-              <li>Built/automated/standardized ______; reduced ______.</li>
-              <li>Tools: Python, SQL, Linux, Git (only if relevant).</li>
-            </ul>
-          </div>
-        </div>
+<div class="stack">
 
-        <div class="row">
-          <div class="row-left">
-            <h3>Certification</h3>
-            <p class="meta">Professional Scrum Master I (PSM I)</p>
-          </div>
-          <div class="row-right">
-            <p class="muted">
-              Certified in Scrum fundamentals with emphasis on iterative delivery and team execution.
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="row-left">
+      <h3>Crew Lead — Operations & Logistics</h3>
+      <p class="meta">Two Men and a Truck • Aug 2025–Present</p>
+    </div>
+    <div class="row-right">
+      <ul class="bullets">
+        <li>
+          Lead and execute residential and long distance moves, coordinating crews of 2–6 people
+          across jobs ranging from short local moves to multi day cross-country relocations.
+        </li>
+        <li>
+          Own on site decision making: assign tasks, resolve customer issues, approve plan changes,
+          and ensure jobs are completed safely, efficiently, and to specification.
+        </li>
+        <li>
+          Perform daily vehicle inspections (DVIRs) and proactively identify safety risks,
+          preventing incidents before they occur.
+        </li>
+        <li>
+          Support hiring, onboarding, and training by reviewing resumes, training new crew members,
+          and mentoring less experienced teammates.
+        </li>
+        <li>
+          Exploring a process improvement initiative focused on internal tooling to streamline
+          job execution and operational coordination.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row-left">
+      <h3>Rural Mail Carrier</h3>
+      <p class="meta">United States Postal Service • 2022–2023</p>
+    </div>
+    <div class="row-right">
+      <ul class="bullets">
+        <li>
+          Independently managed a high volume rural delivery route averaging ~300 households per day,
+          operating with minimal supervision while meeting strict delivery windows.
+        </li>
+        <li>
+          Optimized route sequencing and daily workflow to reduce delivery time and improve
+          consistency under variable conditions.
+        </li>
+        <li>
+          Maintained reliability, accuracy, and customer trust in a role requiring sustained
+          attention to detail and personal accountability.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row-left">
+      <h3>Delivery Driver</h3>
+      <p class="meta">Jimmy John’s • 2023–2025</p>
+    </div>
+    <div class="row-right">
+      <ul class="bullets">
+        <li>
+          Completed high throughput delivery shifts (20–40 hours/week, ~3 deliveries/hour),
+          balancing speed, accuracy, and customer service in a time sensitive environment.
+        </li>
+        <li>
+          Regularly closed shifts, trained new hires, and covered additional shifts to
+          maintain operational continuity.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row-left">
+      <h3>Certification</h3>
+      <p class="meta">Professional Scrum Master I (PSM I)</p>
+    </div>
+    <div class="row-right">
+      <p class="muted">
+        Certified in Scrum fundamentals with emphasis on iterative delivery, team coordination,
+        and execution under real world constraints.
+      </p>
+    </div>
+  </div>
+
+</div>
+
     </section>
 
     <section class="section" id="skills">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p>Readable, honest, and aligned with the roles you want.</p>
-      </div>
+  <div class="section-head">
+    <h2>Skills</h2>
+    <p>Practical skills used to design, build, and ship reliable systems.</p>
+  </div>
 
-      <div class="pill-grid" aria-label="Skills list">
-        <span class="pill">Python</span>
-        <span class="pill">C</span>
-        <span class="pill">Java</span>
-        <span class="pill">SQL</span>
-        <span class="pill">Linux</span>
-        <span class="pill">Git</span>
-        <span class="pill">Docker</span>
-        <span class="pill">Data analysis</span>
-        <span class="pill">Testing</span>
-        <span class="pill">Documentation</span>
-      </div>
-    </section>
+  <div class="pill-grid" aria-label="Skills list">
+  <!-- Core -->
+  <span class="pill">Python</span>
+  <span class="pill">C</span>
+  <span class="pill">Java</span>
+  <span class="pill">SQL</span>
+  <span class="pill">Linux</span>
+
+  <!-- Systems & Theory -->
+  <span class="pill">Algorithms & Data Structures</span>
+  <span class="pill">Probabilistic Inference</span>
+  <span class="pill">Constraint Solving</span>
+  <span class="pill">Reinforcement Learning</span>
+
+  <!-- Engineering Practice -->
+  <span class="pill">Git</span>
+  <span class="pill">Docker</span>
+  <span class="pill">Testing</span>
+  <span class="pill">Documentation</span>
+  <span class="pill">Data Analysis</span>
+</div>
+
+</section>
+
 
     <section class="section" id="contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>Make it easy for people to reach you in one click.</p>
-      </div>
+  <div class="section-head">
+    <h2>Contact</h2>
+    <p>Open to internships, research, and early stage engineering opportunities.</p>
 
-      <div class="contact">
-        <div class="contact-card">
-          <p class="contact-title">Email</p>
-          <a class="contact-link" href="mailto:you@example.com">you@example.com</a>
-          <p class="muted">Fastest response.</p>
-        </div>
+  </div>
 
-        <div class="contact-card">
-          <p class="contact-title">Links</p>
-          <div class="contact-links">
-            <a href="https://github.com/taronmoe" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-          </div>
-          <p class="muted">Keep these updated.</p>
-        </div>
+  <div class="contact">
+    <div class="contact-card">
+      <p class="contact-title">Email</p>
+      <a class="contact-link" href="mailto:taronmoe@icloud.com">taronmoe@icloud.com</a>
+      <p class="muted">Fastest response.</p>
+    </div>
+
+    <div class="contact-card">
+      <p class="contact-title">Links</p>
+      <div class="contact-links">
+        <a href="https://github.com/taronmoe" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/taron-moe-stull/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </div>
-    </section>
+      <p class="muted">Always current.</p>
+    </div>
+  </div>
+</section>
+
 
     <footer class="footer">
       <p>© <span id="y"></span> Taron Moe-Stull</p>
