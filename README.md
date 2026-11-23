@@ -1,17 +1,15 @@
 # Personal Portfolio Website
 
-This repository contains the source code for my personal portfolio website, built to present selected engineering work, technical focus areas, and experience in a clear, readable format.
+Source for [taronmoe.github.io](https://taronmoe.github.io/), a lightweight professional portfolio for software, solutions engineering, and technical implementation opportunities.
 
-The site is intentionally implemented using plain HTML and CSS to keep the stack simple, fast, and easy to maintain, with an emphasis on accessibility, responsiveness, and content clarity over frameworks.
+## Content
+- Featured real-world inventory and logistics software project
+- Selected academic engineering projects
+- Professional experience, education, and skills
+- Contact information and resume
 
-**Live site:** https://taronmoe.github.io/
+## Technology
+Plain HTML and CSS hosted on GitHub Pages. No frontend framework or build system.
 
-## Design Goals
-- Prioritize readability and information density without clutter
-- Communicate technical depth through project descriptions, not visual gimmicks
-- Keep the codebase minimal, understandable, and dependency-free
-
-## Tech
-- HTML5
-- CSS (custom, no frameworks)
-- GitHub Pages for hosting
+## Maintenance
+Keep `assets/resume.pdf` current when updating the resume; the homepage Resume links point to it. Verify project code / paper links against committed assets before publishing.
